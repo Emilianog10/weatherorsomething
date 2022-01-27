@@ -59,8 +59,11 @@ Gets the forecast for 5 days
 
 1. Gets the forecast for 5 days.
 2. Displays it in InfoPage()
+3. Createst 
 
-### InfoPage()
+
+
+### InfoPage(weather)
 Literally shows the weather
 
 ![Image Text](infopage.png)
