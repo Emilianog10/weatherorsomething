@@ -22,7 +22,7 @@ the weather is outputted and shown to the user.
 ### NavigationPage()
 Start page for Weatherorsomething™
 
-![Image Text](nav.png)
+![Image Text](/phtos/nav.png)
 
 1. Start with a screen with the logo and a button that starts the program. 
 2. If the user presses start then go to Zipcode().
@@ -30,7 +30,7 @@ Start page for Weatherorsomething™
 ### Zipcode()
 Will have a place for user to input zip code (XXXXX)
 
-![Image Text](zipcode.png)
+![Image Text](/phtos/z.png)
 
 1. The user will get the option to input their zipcode.
 2. When they input the zipcode they should will be taken to Xnumberofdays()
@@ -38,7 +38,7 @@ Will have a place for user to input zip code (XXXXX)
 ### Xnumberofdays()
 Asks user if they want 24 Hour weather, or week weather. 
 
-![Image Text](numberofdays.png)
+![Image Text](/phtos/x.png)
 
 1. Gives the player the option to see a 24 hour forecast or a 5 day forcast 
 2. If 24 Hour Forecast run dayforecast().
@@ -47,26 +47,25 @@ Asks user if they want 24 Hour weather, or week weather.
 ### dayforecast()
 Gets the forecast for 24 hours
 
-![Image Text](dayfor.png)
+![Image Text](/phtos/da.png)
 
 1. Gets the forcaast for 24 hours
 2. Displays it in InfoPage()
+3. Creates "weather"
 
 ### 5dayforecast()
 Gets the forecast for 5 days
 
-![Image Text](5dayfor.png)
+![Image Text](/phtos/5.png)
 
 1. Gets the forecast for 5 days.
 2. Displays it in InfoPage()
-3. Createst 
-
-
+3. Creates "weather"
 
 ### InfoPage(weather)
 Literally shows the weather
 
-![Image Text](infopage.png)
+![Image Text](/phtos/in.png)
 
 1. Displays the info sent by either dayforecast() or 5dayforecast()
 2. Shows a button which if pressed sends user to ClothesRec()
@@ -74,7 +73,7 @@ Literally shows the weather
 ### ClothesRec()
 Recommends clothes based on weather. 
 
-![Image Text](clothes.png)
+![Image Text](/phtos/cl.png)
 
 1. Reads the weather.
 2. If 80-90 says wear shirts, if 70-80 wear a long sleeve etc. 
