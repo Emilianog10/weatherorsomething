@@ -16,10 +16,16 @@ namespace weatherorsomething
         /// Prompts the user to enter a zip code and validates the text they entered is a 5 digit number. Then, returns the zip code they entered.
         /// </summary>
         /// 
-        /// <returns></returns>
+        /// <returns>TODO(jcollard 2022-01-30): Fill in return</returns>
         /// 
         public static string NavigationPage()
         {
+            // Feedback(jcollard 2022-01-30): I don't understand what this
+            // method is doing. Rethink your step-by-step algorithm here and
+            // think about how someone who doesn't understand your program will
+            // understand it.
+
+
             // 1. Have a way to write start.
             // 2. If start written the start
             // 3. If not wait till it is. 
@@ -35,14 +41,20 @@ namespace weatherorsomething
         /// <summary>
         /// Given a string to validate, validates it by cheking to see if it 5 charecters long and all chars are numbers. If valid returns true otherwise returns false.
         /// </summary>
-        /// <param name="zipToValidate"></param>
-        /// <returns></returns>
+        /// <param name="zipToValidate">TODO(jcollard 2022-01-30): Fill in param</param>
+        /// <returns>TODO(jcollard 2022-01-30): Fill in return</returns>
         public static string ValidateZipcode(string zipToValidate)
         {
             // TODO(jcollard 2022-01-27): Add step-by-step human readable algorithm
             // 1. Takes zipToValidate and reads it
             // 2. Makes sure that it is 5 charecters long.
             // 3. Makes sure that it is only numbers. 
+
+            //TODO(jcollard 2022-01-30): Then what? You have not finished your
+            //step-by step algorithm. What does it do if it meets the
+            //requirements? What doe sit do if it does not meet the
+            //requirements?
+
             return null;
         }
 
@@ -50,13 +62,15 @@ namespace weatherorsomething
         /// <summary>
         /// Prompts user to input either "1" for one day forecast or "3" for 3 day forcast. If not "1" or "3" return false. 
         /// </summary>
-        /// <returns></returns>
+        /// <returns>TODO(jcollard 2022-01-30): Fill in return</returns>
         public static string xnumberofdays()
         {
             // 1. Asks user if they want a 1 day forecast or a 3 day forcast. 
             // 2. If they input 1 show todays forecast (currentDayWeather())
             // 3. If they input 3 show 3 day forecast (forecast()) 
             // 4. If not 1 or 3 return with invalid. 
+            
+
             return null;
         }
 
@@ -67,8 +81,8 @@ namespace weatherorsomething
         /// <summary>
         /// This method is called when the weather is needed. This method contains the forecast for the next 3 days.  
         /// </summary>
-        /// <param name="zipToValidate"></param>
-        /// <returns></returns>
+        /// <param name="zipToValidate">TODO(jcollard 2022-01-30): Fill in param</param>
+        /// <returns>TODO(jcollard 2022-01-30): Fill in return</returns>
         public static List<string> forecast(string zipToValidate)
         {
             // 1. Take zipcode (zipToValidate) and input it into WeatherAPI
@@ -78,19 +92,20 @@ namespace weatherorsomething
         /// <summary>
         /// This method is called when the weather is needed. This method contains the forecast for the current day.
         /// </summary>
-        /// <param name="zipcode"></param>
-        /// <returns></returns>
+        /// <param name="zipcode">TODO(jcollard 2022-01-30): Fill in param</param>
+        /// <returns>TODO(jcollard 2022-01-30): Fill in return</returns>
         public static string currentDayWeather(string zipcode)
         {
             // 1. Take zipcode (zipToValidate) and input it into WeatherAPI
             // 2. Save the info as a list. 
+
             return null;
         }
         /// <summary>
         /// This shows a current day forecast if the variable day is set to true and if it is not set to true it shows the 3 day forecast. 
         /// </summary>
         /// <param name="day">If its 1 day or 3 day</param>
-        /// <returns></returns>
+        /// <returns>TODO(jcollard 2022-01-30): Fill in return</returns>
         public static string infoPage(string day)
         {
             // 1.   Check if "day" is equal to true. 
@@ -104,9 +119,14 @@ namespace weatherorsomething
         /// <summary>
         /// Recomendds clothes depending on the weather. 
         /// </summary>
-        /// <returns></returns>
-        public static string clothesrec()
+        /// <returns>TODO(jcollard 2022-01-30): Fill in return</returns>
+        public static string clothesrec() 
         {
+            //TODO(jcollard 2022-01-30): This method probably needs to take in a
+            //Weather object. How will it know what to say? What do the if
+            //statements look like?
+
+
             // 1. Read the (weather)
             // 2. Input a list of sorts where the system reads the weather and then uses the info to recommend a set of clothes. 
         }
