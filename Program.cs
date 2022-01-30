@@ -62,10 +62,10 @@ namespace weatherorsomething
 
         public static void DisplayWeather()
         {
-
+            
         }
         /// <summary>
-        /// This method is called when the weather is needed. This method contains the forecast for the current day. 
+        /// This method is called when the weather is needed. This method contains the forecast for the next 3 days.  
         /// </summary>
         /// <param name="zipToValidate"></param>
         /// <returns></returns>
@@ -76,7 +76,7 @@ namespace weatherorsomething
             return null;
         }
         /// <summary>
-        /// This method is called when the weather is needed. This method contains the forecast for the next 3 days. 
+        /// This method is called when the weather is needed. This method contains the forecast for the current day.
         /// </summary>
         /// <param name="zipcode"></param>
         /// <returns></returns>
@@ -86,6 +86,32 @@ namespace weatherorsomething
             // 2. Save the info as a list. 
             return null;
         }
+        /// <summary>
+        /// This shows a current day forecast if the variable day is set to true and if it is not set to true it shows the 3 day forecast. 
+        /// </summary>
+        /// <param name="day">If its 1 day or 3 day</param>
+        /// <returns></returns>
+        public static string infoPage(string day)
+        {
+            // 1.   Check if "day" is equal to true. 
+            // 2. If true show (currentDatWeather)
+            // 3. If false run (forecast).
+            // 4. Then run (clothesrec)
+            return null;
+
+        }
+        
+        /// <summary>
+        /// Recomendds clothes depending on the weather. 
+        /// </summary>
+        /// <returns></returns>
+        public static string clothesrec()
+        {
+            // 1. Read the (weather)
+            // 2. Input a list of sorts where the system reads the weather and then uses the info to recommend a set of clothes. 
+        }
+        
+    
 
     } // Feedback(jcollard 2022-01-27): Moved this curly bracket such that the methods were inside of the class. Methods must be within a class
 }
