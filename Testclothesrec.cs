@@ -11,6 +11,8 @@ namespace weatherorsomething
             string result = Program.clothesrec(49);
             if (result != "stay home")
             {
+                // TODO(jcollard 2022-02-03): Add error messages to explain why the test is failing
+                Console.Error.WriteLine($"Expected the result to be 'stay home' but it was {result}");
                 return false;
             }
 
