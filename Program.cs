@@ -26,6 +26,18 @@ namespace weatherorsomething
             bool testValidateZipcode = TestValidateZipcode.RunTest();
             Console.WriteLine($"Test TestValidateZipcode(filename): {testValidateZipcode}");
 
+            bool testforecast = Testforecast.RunTest();
+            Console.WriteLine($"Test TestForecast(filename): {testforecast}");
+
+            bool testinfo = Testinfo.RunTest();
+            Console.WriteLine($"Test Testinfo(filename): {testinfo}");
+
+            bool testxnumberofdays = Testxnumberofdays.RunTest();
+            Console.WriteLine($"Test Testxnumberofdays(filename): {testxnumberofdays}");
+
+            bool testclothesrec = Testclothesrec.RunTest();
+            Console.WriteLine($"Test Testclothesrec(filename): {testclothesrec}");
+
 
 
         }
@@ -98,7 +110,7 @@ namespace weatherorsomething
         /// This method is called when the weather is needed. This method contains the forecast for the next 3 days.  
         /// </summary>
         /// <param name="input">this is the zipcode that was imputed</param>
-        /// <returns>this should return the weather</returns>
+        /// <returns>this should return the weather in a list/string</returns>
         public static List<string> forecast(string input)
         {
             // 1. Take zipcode (zipToValidate) and input it into WeatherAPI
@@ -127,7 +139,7 @@ namespace weatherorsomething
         /// </summary>
         /// <param name="weather">A recording of what the weather is</param>
         /// <returns>a recomendation of clothes</returns>
-        public static string clothesrec(string weather) 
+        public static string clothesrec(int temperatue) 
         {
             //TODO(jcollard 2022-01-30): This method probably needs to take in a
             //Weather object. How will it know what to say? What do the if
@@ -136,7 +148,7 @@ namespace weatherorsomething
 
             // 1. Read the (weather)
             // 2. Input a list of sorts where the system reads the weather and then uses the info to recommend a set of clothes. 
-            // 3. If 0-50; stay home
+            // 3. If 0-60; stay home
             // 4. If 60-70; wear warm clothes
             // 5. If 70-80; wear a jacket
             // 6. If 80-90; wear a t-shirt

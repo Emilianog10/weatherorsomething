@@ -8,42 +8,57 @@ namespace weatherorsomething
         public static bool RunTest()
 
         {
-            if(weather < 50)
+            string result = Program.clothesrec(49);
+            if (result != "stay home")
             {
-            Console.Error.WriteLine("You should stay home. You will freeze");
+                return false;
             }
 
-            else if(weather > 49 && weather < 60)
+            string result2 = Program.clothesrec(55);
+            if (result2 != "wear warm clothes")
             {
-                Console.Error.WriteLine("You should wear very warm clothes. Like a blanket that doubles as a sweater.");
+                return false;
             }
 
-            else if(weather > 59 && weather < 70)
+            string result3 = Program.clothesrec(63);
+            if (result3 != "wear a jacket")
             {
-                Console.WriteLine("You should wear a multiple layers. Like a sweater and a jacket. ");
+                return false;
             }
 
-            else if(weather > 69 && weather < 80)
+            string result4 = Program.clothesrec(77);
+            if (result4 != "wear a t-shirt")
             {
-                Console.WriteLine("Only need a light jacket maybe even a t-shirt");
+                return false;
             }
 
-            else if(weather > 79 && weather < 90)
+            string result5 = Program.clothesrec(82);
+            if (result5 != "wear shorts")
             {
-                Console.WriteLine("You should wear a t-shirt and some jeans.");
+                return false;
             }
 
-            else if(weather > 89 && weather < 100)
+            string result6 = Program.clothesrec(96);
+            if (result6 != "Halleluia its very hot. Tank top")
             {
-                Console.WriteLine("You should wear shorts");
+                return false;
             }
 
-            else if(weather > 99)
+            string result7 = Program.clothesrec(102);
+            if (result7 != "stay home")
             {
-                Console.WriteLine("Stay home. Too hot");
-            } 
+                return false;
+            }
 
-        return false;
+            
+            
+
+            
+
+
+            
+
+        return true;
         }
     }
 }
