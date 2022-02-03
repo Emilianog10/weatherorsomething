@@ -9,18 +9,27 @@ namespace weatherorsomething
         {    
             Console.WriteLine("You should see the forecast");   
 
-            bool result = Program.info(day);// i dont know if this is right exactly but i think its easy enough to fix with you tommorow
-            if (result = "true")
-            {
-                return false;
-            }
+            // TODO(jcollard 2022-02-03): It looks like this method should probably have different parameters.
+            // I would suggest the following:
+            // public static string info(int days, List<string> report)
+            // The first argument should be 1 or 3
+            // The second argument is a list containing 3 strings (the weather report for each day).
 
-            string result2 = Program.info(day);// i dont know if this is right exactly but i think its easy enough to fix with you tommorow
-            if (result2 != "Here is you weather : Today it is 10 degrees, tommorow it will be 30 degrees, and the day after tommorow it will 20002 degrees.")
-            {
-                return false;
-            }
+            // With this method, it becomes a little easier to write the test.
+            // What should it do in the following situation:
+            
+            // List<string> report = new List<string>();
+            // report.Add("68F");
+            // report.Add("69F");
+            // report.Add("66F");
+            // string result = Program.info(1, report);
 
+            // What about this:
+            
+            // string result2 = Program.info(3, report);
+
+            // What are some other situations you could test?
+            
             return true;
         }
     }
