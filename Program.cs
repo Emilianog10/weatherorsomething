@@ -20,23 +20,23 @@ namespace weatherorsomething
 
         public static void TestAll()
         {
-            bool testStart = TestStart.RunTest();
-            Console.WriteLine($"Test TestStart(filename): {testStart}");
+            // bool testStart = TestStart.RunTest();
+            // Console.WriteLine($"Test TestStart(filename): {testStart}");
 
-            bool testValidateZipcode = TestValidateZipcode.RunTest();
-            Console.WriteLine($"Test TestValidateZipcode(filename): {testValidateZipcode}");
+            // bool testValidateZipcode = TestValidateZipcode.RunTest();
+            // Console.WriteLine($"Test TestValidateZipcode(filename): {testValidateZipcode}");
 
             bool testforecast = Testforecast.RunTest();
             Console.WriteLine($"Test TestForecast(filename): {testforecast}");
 
-            bool testinfo = Testinfo.RunTest();
-            Console.WriteLine($"Test Testinfo(filename): {testinfo}");
+            // bool testinfo = Testinfo.RunTest();
+            // Console.WriteLine($"Test Testinfo(filename): {testinfo}");
 
-            bool testxnumberofdays = Testxnumberofdays.RunTest();
-            Console.WriteLine($"Test Testxnumberofdays(filename): {testxnumberofdays}");
+            // bool testxnumberofdays = Testxnumberofdays.RunTest();
+            // Console.WriteLine($"Test Testxnumberofdays(filename): {testxnumberofdays}");
 
-            bool testclothesrec = Testclothesrec.RunTest();
-            Console.WriteLine($"Test Testclothesrec(filename): {testclothesrec}");
+            // bool testclothesrec = Testclothesrec.RunTest();
+            // Console.WriteLine($"Test Testclothesrec(filename): {testclothesrec}");
 
 
 
@@ -94,7 +94,7 @@ namespace weatherorsomething
         /// Prompts user to input either "1" for one day forecast or "3" for 3 day forcast. If not "1" or "3" return false. 
         /// </summary>
         /// <returns>if the input was valid</returns>
-        public static string xnumberofdays()
+        public static string xnumberofdays(int numdays)
         {
             // 1. ask for input of ether 1 or 3
             // If the input is not 1 or 3 return false.
@@ -117,15 +117,34 @@ namespace weatherorsomething
             // 2. Save weather for current day in (currentday)
             // 3. Save weather for today and next 3 days in (moredays)
             // 4. Save the info as a list. 
-            return null;
+            List <string> forecast;
+            forecast = new List<string> ();
+            Weather weather = new WeatherAPI().GetWeather(input);
+
+            string date0 = weather.ForecastData[0]["date"];
+            string high0 = weather.ForecastData[0]["maxtemp_f"];
+            forecast.Add($"Forecast {date0} High: {high0}");
+
+            string date1 = weather.ForecastData[1]["date"];
+            string high1 = weather.ForecastData[1]["maxtemp_f"];
+            forecast.Add($"Forecast {date1} High: {high1}");
+
+            string date2 = weather.ForecastData[2]["date"];
+            string high2 = weather.ForecastData[2]["maxtemp_f"];
+            forecast.Add($"Forecast {date2} High: {high2}");
+
+            
+            // forecast.Add("Forecast string");
+            return forecast;
         }
 
         /// <summary>
-        /// This shows a current day forecast if the variable day is set to true and if it is not set to true it shows the 3 day forecast. 
+        /// DIsplays info
         /// </summary>
-        /// <param name="day">If its 1 day or 3 day</param>
-        /// <returns>this return the weather</returns>
-        public static string info(string day)
+        /// <param name="days"></param>
+        /// <param name="report"></param>
+        /// <returns></returns>
+        public static string info(int days, List<string> report)
         {
             // 1. Check if "day" is equal to true. 
             // 2. If true show (currentday)

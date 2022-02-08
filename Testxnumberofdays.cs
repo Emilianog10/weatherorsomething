@@ -24,7 +24,7 @@ namespace weatherorsomething
                 return false;
             }
 
-            string result8 = Program.xnumberofdays(j);
+            string result8 = Program.xnumberofdays(999);
             if (result8 != "invalid")
             {
                 return false;
@@ -42,7 +42,7 @@ namespace weatherorsomething
                 return false;
             }
             
-            string result11 = Program.xnumberofdays(kk);
+            string result11 = Program.xnumberofdays(8);
             if (result11 != "invalid")
             {
                 return false;

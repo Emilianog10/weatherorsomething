@@ -29,6 +29,10 @@ namespace weatherorsomething
             // string result2 = Program.info(3, report);
 
             // What are some other situations you could test?
+
+            // Console.WriteLine($"Today's weather: {testResults[0]}");
+            // Console.WriteLine($"Tomorrows's weather: {testResults[1]}");
+            // Console.WriteLine($"Third Day's weather: {testResults[2]}");
             
             return true;
         }

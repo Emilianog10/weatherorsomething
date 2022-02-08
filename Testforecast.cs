@@ -17,7 +17,7 @@ namespace weatherorsomething
             // Check that the list contains 3 items (the weather for 3 days)
             if (testResults.Count != 3)
             {
-                Console.Error.WriteLine("Expected the forecast to produce 3 elements but it has {testResults.Count} elements.");
+                Console.Error.WriteLine($"Expected the forecast to produce 3 elements but it has {testResults.Count} elements.");
                 return false;
             }
 
@@ -30,6 +30,10 @@ namespace weatherorsomething
             if (response != "y")
             {
                 return false;
+            }
+            else 
+            {
+                return true;
             }
             
 
@@ -51,20 +55,7 @@ namespace weatherorsomething
             Console.WriteLine($"Today's weather: {testResults2[0]}");
             Console.WriteLine($"Tomorrows's weather: {testResults2[1]}");
             Console.WriteLine($"Third Day's weather: {testResults2[2]}");
-            Console.WriteLine("Does this look correct? Type 'x' if it is correct."); // TODO(jcollard 2022-02-08): I don't think this method expects any user input
-
-            // Feedback(jcollard 2022-02-08): Every test case should result in
-            // you calling `Program.forcast(something)`. In this case, I think
-            // you should be calling Program.forecast("x"); which should
-            // probably produce an exception OR an empty list. It is up to you.
-            // How do you think your program should handle that?
-
-            string response2 = Console.ReadLine();  // TODO(jcollard 2022-02-08): I'm not sure what you're trying to do here.
-            if (response2 != "x")
-            {
-                return false;
-            }
-
+            
 
             Console.WriteLine("Testing Forecast.");
             List<string> testResults3 = Program.forecast("9019");
@@ -101,7 +92,7 @@ namespace weatherorsomething
                 Console.Error.WriteLine("Expected the forecast to produce 0 elements because not valid zipcode but it has {testResults.Count} elements. ");
                 return false;
             }
-            
+
             return true;
         }
     }
