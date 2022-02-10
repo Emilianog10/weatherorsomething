@@ -16,6 +16,12 @@ namespace weatherorsomething
             }
 
             // Otherwise, the program continues executing
+
+            // TODO(jcollard 2022-02-10): Write a program that asks the user to input a zip code.
+            // Then, call forecast with the users input
+            // Then, write a foreach loop which displays the 3 day forecast
+
+            
         }
 
         public static void TestAll()
@@ -113,6 +119,20 @@ namespace weatherorsomething
         /// <returns>this should return the weather in a list/string</returns>
         public static List<string> forecast(string input)
         {
+
+            // TODO(jcollard 2022-02-10): You need to check that input is a 5 digit zipcode
+            // Something like:
+
+            if (input.Length != 5)
+            {
+                // What do you do if the zip is not 5 characters?
+            }
+
+            if (int.TryParse(input, out int asNum) == false)
+            {
+                // What do you do if the zip is not a number?
+            }
+
             // 1. Take zipcode (zipToValidate) and input it into WeatherAPI
             // 2. Save weather for current day in (currentday)
             // 3. Save weather for today and next 3 days in (moredays)
@@ -136,9 +156,9 @@ namespace weatherorsomething
             string high2 = weather.ForecastData[2]["maxtemp_f"];
             forecast.Add($"Forecast {date2} High: {high2}");
 
-            Console.WriteLine($"The weather for today is {forecast1}");
+            Console.WriteLine($"The weather for today is {forecast1}"); // TODO(jcollard 2022-02-10): You should probably remove this line.
 
-            forecast1.ForEach(Console.WriteLine);
+            forecast1.ForEach(Console.WriteLine); // TODO(jcollard 2022-02-10): You should probably remove this line.
 
             
             // forecast.Add("Forecast string");
