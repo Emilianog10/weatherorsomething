@@ -118,12 +118,15 @@ namespace weatherorsomething
             // 3. Save weather for today and next 3 days in (moredays)
             // 4. Save the info as a list. 
             List <string> forecast;
+            List <string> forecast1;
             forecast = new List<string> ();
+            forecast1 = new List<string> ();
             Weather weather = new WeatherAPI().GetWeather(input);
 
             string date0 = weather.ForecastData[0]["date"];
             string high0 = weather.ForecastData[0]["maxtemp_f"];
             forecast.Add($"Forecast {date0} High: {high0}");
+            forecast1.Add($"Forecast {date0} High: {high0}");
 
             string date1 = weather.ForecastData[1]["date"];
             string high1 = weather.ForecastData[1]["maxtemp_f"];
@@ -132,6 +135,10 @@ namespace weatherorsomething
             string date2 = weather.ForecastData[2]["date"];
             string high2 = weather.ForecastData[2]["maxtemp_f"];
             forecast.Add($"Forecast {date2} High: {high2}");
+
+            Console.WriteLine($"The weather for today is {forecast1}");
+
+            forecast1.ForEach(Console.WriteLine);
 
             
             // forecast.Add("Forecast string");
