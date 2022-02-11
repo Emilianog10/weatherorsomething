@@ -7,7 +7,7 @@ namespace weatherorsomething
     {
         static void Main(string[] args)
         {
-            // // Checks if the user added a command line argument 
+             // // Checks if the user added a command line argument 
             // // Also checks if the first argument is "test"
             // if (args.Length > 0 && args[0] == "test")
             // {
