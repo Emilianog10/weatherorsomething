@@ -27,7 +27,6 @@ namespace weatherorsomething
                     if (ValidateZipcode(zipcode1) == true)
                     {
                         List<string> results = forecast(zipcode1);
-                        // results.ForEach(Console.WriteLine);
                         foreach(string result in results)
                         {
                             Console.WriteLine(result);
@@ -114,7 +113,7 @@ namespace weatherorsomething
             // 2. Makes sure that it is 5 charecters long.
             // 3. Makes sure that it is only numbers. 
             // 4. If all parameters are met, then return the zipcode as valid, if not all the paramaters are met, then return invalid. 
-
+            if (input == null) throw new Exception("Cannot process null string.");
             foreach (char c in input)
             {
                 if (char.IsDigit(c) == false)
