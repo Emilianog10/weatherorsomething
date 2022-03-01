@@ -65,7 +65,7 @@ Gets the forecast for 5 days
 ### InfoPage(weather)
 Literally shows the weather
 
-![Image Text](/phtos/in.png)
+`![Image Text](/phtos/in.png)`
 
 1. Displays the info sent by either dayforecast() or 5dayforecast()
 2. Shows a button which if pressed sends user to ClothesRec()

@@ -227,7 +227,23 @@ namespace weatherorsomething
             return null;
         }
 
+        /// <summary>
+        /// This method should be able to ask the user if they want to compare weathers and of which places they want (Maybe add a way to get a zipcode from a name).
+        /// </summary>
+        /// <returns>A list that contains all the zipcodes</returns>
+        public static string compare()
+        {
+            // 1. Ask if the user would want to compare weather
+            // 2. Make sure its a number somehow
+            // 3. Ask how many places' weather they would like to see
+            // 4. Make sure input is integer
+            // 5. Ask for x number of zipcodes
+            // 6. Save all inputs to a list to use in the weather Api.
+
+            return null;
+        }
+    }
+
 
 
     } // Feedback(jcollard 2022-01-27): Moved this curly bracket such that the methods were inside of the class. Methods must be within a class
-}
