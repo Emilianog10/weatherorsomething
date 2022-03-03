@@ -18,6 +18,13 @@ namespace weatherorsomething
             // Otherwise, the program continues executing
             while (true)
             {
+                Console.WriteLine("Would you like to compare weather?");
+                Console.WriteLine("If yes write 'y' if no write 'n'");
+                string yess = Console.ReadLine();
+                if (yess == "y")
+                {
+                    getZipCodes();
+                }
                 Console.WriteLine("Please input a 5 digit zipcode:");
                 string zipcode1 = Console.ReadLine();
                 Console.WriteLine($"Is this right: {zipcode1}. If this is right, write y.");
@@ -231,7 +238,7 @@ namespace weatherorsomething
         /// This method should be able to ask the user if they want to compare weathers and of which places they want (Maybe add a way to get a zipcode from a name).
         /// </summary>
         /// <returns>A list that contains all the zipcodes</returns>
-        public static string compare()
+        public static List<string> getZipCodes()
         {
             // 1. Ask if the user would want to compare weather
             // 2. Make sure its a number somehow
@@ -239,6 +246,14 @@ namespace weatherorsomething
             // 4. Make sure input is integer
             // 5. Ask for x number of zipcodes
             // 6. Save all inputs to a list to use in the weather Api.
+            List<string> Zips;
+            Zips = new List<string>();
+            Console.WriteLine("Enter another zipcode");
+            Zips.Add(Console.ReadLine());
+            Console.WriteLine("Another one?");
+            // Is there a way to loop these things? So that I can say how many times I want it and loop it x amount of times?
+            
+                     
 
             return null;
         }
