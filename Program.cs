@@ -28,6 +28,8 @@ namespace weatherorsomething
                     foreach (string yes in fcast)
                     {
                         Console.WriteLine($"{yes}");
+                        Console.WriteLine("Press enter to continue.");
+                        Console.ReadLine();
                     }
 
                 }
@@ -227,6 +229,10 @@ namespace weatherorsomething
         /// <returns>A list that contains all the zipcodes</returns>
         public static List<string> getZipCodes(string input)
         {
+            if (input == null)
+            {
+                throw new Exception("Input may not be null.");
+            }
             // 1. Ask if the user would want to compare weather
             // 2. Make sure its a number somehow
             // 3. Ask how many places' weather they would like to see
