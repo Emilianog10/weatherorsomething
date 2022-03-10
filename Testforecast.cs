@@ -35,7 +35,9 @@ namespace weatherorsomething
             {
                 return true;
             }
-            
+        }
+    }
+}   
 
             // Next, test for a few more zip codes.
             // Finally, what should happen if you give something weird?
@@ -43,59 +45,59 @@ namespace weatherorsomething
             // Or Program.forecast("90304-0555");
             
 
-            Console.WriteLine("Testing Forecast.");
-            List<string> testResults2 = Program.forecast("90102");
+//             Console.WriteLine("Testing Forecast.");
+//             List<string> testResults2 = Program.forecast("90102");
 
-            if (testResults2.Count != 3)
-            {
-                Console.Error.WriteLine("Expected the forecast to produce 3 elements but it has {testResults.Count} elements.");
-                return false;
-            }
+//             if (testResults2.Count != 3)
+//             {
+//                 Console.Error.WriteLine("Expected the forecast to produce 3 elements but it has {testResults.Count} elements.");
+//                 return false;
+//             }
 
-            Console.WriteLine($"Today's weather: {testResults2[0]}");
-            Console.WriteLine($"Tomorrows's weather: {testResults2[1]}");
-            Console.WriteLine($"Third Day's weather: {testResults2[2]}");
+//             Console.WriteLine($"Today's weather: {testResults2[0]}");
+//             Console.WriteLine($"Tomorrows's weather: {testResults2[1]}");
+//             Console.WriteLine($"Third Day's weather: {testResults2[2]}");
             
 
-            Console.WriteLine("Testing Forecast.");
-            List<string> testResults3 = Program.forecast("9019");
+//             Console.WriteLine("Testing Forecast.");
+//             List<string> testResults3 = Program.forecast("9019");
             
-            if (testResults3.Count != 0)
-            {
-                Console.Error.WriteLine("Expected the forecast to produce 0 elements because not valid zipcode but it has {testResults.Count} elements. ");
-                return false;
-            }
+//             if (testResults3.Count != 0)
+//             {
+//                 Console.Error.WriteLine("Expected the forecast to produce 0 elements because not valid zipcode but it has {testResults.Count} elements. ");
+//                 return false;
+//             }
 
-            Console.WriteLine("Testing Forecast.");
-            List<string> testResults4 = Program.forecast("90191-0000");
+//             Console.WriteLine("Testing Forecast.");
+//             List<string> testResults4 = Program.forecast("90191-0000");
             
-            if (testResults4.Count != 0)
-            {
-                Console.Error.WriteLine("Expected the forecast to produce 0 elements because not valid zipcode but it has {testResults.Count} elements. ");
-                return false;
-            }
+//             if (testResults4.Count != 0)
+//             {
+//                 Console.Error.WriteLine("Expected the forecast to produce 0 elements because not valid zipcode but it has {testResults.Count} elements. ");
+//                 return false;
+//             }
 
-            Console.WriteLine("Testing Forecast.");
-            List<string> testResults5 = Program.forecast("ABCDE");
+//             Console.WriteLine("Testing Forecast.");
+//             List<string> testResults5 = Program.forecast("ABCDE");
             
-            if (testResults5.Count != 0)
-            {
-                Console.Error.WriteLine("Expected the forecast to produce 0 elements because not valid zipcode but it has {testResults.Count} elements. ");
-                return false;
-            }
+//             if (testResults5.Count != 0)
+//             {
+//                 Console.Error.WriteLine("Expected the forecast to produce 0 elements because not valid zipcode but it has {testResults.Count} elements. ");
+//                 return false;
+//             }
 
-            Console.WriteLine("Testing Forecast.");
-            List<string> testResults6 = Program.forecast("!#^(&");
+//             Console.WriteLine("Testing Forecast.");
+//             List<string> testResults6 = Program.forecast("!#^(&");
             
-            if (testResults6.Count != 0)
-            {
-                Console.Error.WriteLine("Expected the forecast to produce 0 elements because not valid zipcode but it has {testResults.Count} elements. ");
-                return false;
-            }
+//             if (testResults6.Count != 0)
+//             {
+//                 Console.Error.WriteLine("Expected the forecast to produce 0 elements because not valid zipcode but it has {testResults.Count} elements. ");
+//                 return false;
+//             }
 
-            return true;
-        }
-    }
-}
+//             return true;
+//         }
+//     }
+// }
 
-// this is the one i need help with. Hopefully it not to bad. 
+// // this is the one i need help with. Hopefully it not to bad. 

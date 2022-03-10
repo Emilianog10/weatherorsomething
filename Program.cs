@@ -7,7 +7,7 @@ namespace weatherorsomething
     {
         static void Main(string[] args)
         {
-             // // Checks if the user added a command line argument 
+            // // Checks if the user added a command line argument 
             // // Also checks if the first argument is "test"
             // if (args.Length > 0 && args[0] == "test")
             // {
@@ -18,43 +18,28 @@ namespace weatherorsomething
             // Otherwise, the program continues executing
             while (true)
             {
-                Console.WriteLine("Would you like to compare weather?");
-                Console.WriteLine("If yes write 'y' if no write 'n'");
-                string yess = Console.ReadLine();
-                if (yess == "y")
+                Console.WriteLine("How many place's weather would you like to compare?");
+                string numberr = Console.ReadLine();
+                List<string> resultss = getZipCodes(numberr);
+                foreach (string variable in resultss)
                 {
-                    getZipCodes();
-                }
-                Console.WriteLine("Please input a 5 digit zipcode:");
-                string zipcode1 = Console.ReadLine();
-                Console.WriteLine($"Is this right: {zipcode1}. If this is right, write y.");
-                string rightowrong = Console.ReadLine();
-                if (rightowrong == "y")
-                {
-                    if (ValidateZipcode(zipcode1) == true)
+                    Console.WriteLine($"Trying {variable}");
+                    List<string> fcast = forecast(variable);
+                    foreach (string yes in fcast)
                     {
-                        List<string> results = forecast(zipcode1);
-                        foreach(string result in results)
-                        {
-                            Console.WriteLine(result);
-                        }
-                        return;
+                        Console.WriteLine($"{yes}");
                     }
-                    else if (ValidateZipcode(zipcode1) == false)
-                    {
-                        Console.WriteLine("Type zipcode again:");
-                    }
+
                 }
-                else
-                {
-                    Console.WriteLine("Type it again:");
-                }
+                return;
+                    
+                
+                // TODO(jcollard 2022-02-10): Write a program that asks the user to input a zip code.
+                // Then, call forecast with the users input
+                // Then, write a foreach loop which displays the 3 day forecast
+
+
             }
-            // TODO(jcollard 2022-02-10): Write a program that asks the user to input a zip code.
-            // Then, call forecast with the users input
-            // Then, write a foreach loop which displays the 3 day forecast
-
-
         }
 
         public static void TestAll()
@@ -136,6 +121,7 @@ namespace weatherorsomething
         /// </summary>
         /// <returns>if the input was valid</returns>
         public static string xnumberofdays(int numdays)
+        //  public static List<string> forecast(List<string>input);
         {
             // 1. ask for input of ether 1 or 3
             // If the input is not 1 or 3 return false.
@@ -160,12 +146,12 @@ namespace weatherorsomething
 
             if (input.Length != 5)
             {
-                // What do you do if the zip is not 5 characters?
+                Console.WriteLine($"The zipcode {input} is invalid.");
             }
 
             if (int.TryParse(input, out int asNum) == false)
             {
-                // What do you do if the zip is not a number?
+                Console.WriteLine($"The zipcode {input} is invalid.");
             }
 
             // 1. Take zipcode (zipToValidate) and input it into WeatherAPI
@@ -180,16 +166,17 @@ namespace weatherorsomething
 
             string date0 = weather.ForecastData[0]["date"];
             string high0 = weather.ForecastData[0]["maxtemp_f"];
-            forecast.Add($"Forecast {date0} High: {high0}");
-            forecast1.Add($"Forecast {date0} High: {high0}");
+            string low0 = weather.ForecastData[0]["mintemp_f"];
+            forecast.Add($"Forecast for {date0} is a high of  {high0} and a low of {low0}");
 
-            string date1 = weather.ForecastData[1]["date"];
-            string high1 = weather.ForecastData[1]["maxtemp_f"];
-            forecast.Add($"Forecast {date1} High: {high1}");
+            // string date1 = weather.ForecastData[1]["date"];
+            // string high1 = weather.ForecastData[1]["maxtemp_f"];
+            // forecast.Add($"Forecast {date1} High: {high1}");
 
-            string date2 = weather.ForecastData[2]["date"];
-            string high2 = weather.ForecastData[2]["maxtemp_f"];
-            forecast.Add($"Forecast {date2} High: {high2}");
+            // string date2 = weather.ForecastData[2]["date"];
+            // string high2 = weather.ForecastData[2]["maxtemp_f"];
+            // forecast.Add($"Forecast {date2} High: {high2}");
+
 
 
             // forecast.Add("Forecast string");
@@ -238,7 +225,7 @@ namespace weatherorsomething
         /// This method should be able to ask the user if they want to compare weathers and of which places they want (Maybe add a way to get a zipcode from a name).
         /// </summary>
         /// <returns>A list that contains all the zipcodes</returns>
-        public static List<string> getZipCodes()
+        public static List<string> getZipCodes(string input)
         {
             // 1. Ask if the user would want to compare weather
             // 2. Make sure its a number somehow
@@ -246,19 +233,20 @@ namespace weatherorsomething
             // 4. Make sure input is integer
             // 5. Ask for x number of zipcodes
             // 6. Save all inputs to a list to use in the weather Api.
+
+            int count = Int32.Parse(input);
             List<string> Zips;
             Zips = new List<string>();
-            Console.WriteLine("Enter another zipcode");
-            Zips.Add(Console.ReadLine());
-            Console.WriteLine("Another one?");
+            while (Zips.Count < count)
+            {
+                Console.WriteLine("Enter a zipcode");
+                Zips.Add(Console.ReadLine());
+            }
+            return Zips;
             // Is there a way to loop these things? So that I can say how many times I want it and loop it x amount of times?
-            
-                     
-
-            return null;
         }
     }
 
 
 
-    } // Feedback(jcollard 2022-01-27): Moved this curly bracket such that the methods were inside of the class. Methods must be within a class
+} // Feedback(jcollard 2022-01-27): Moved this curly bracket such that the methods were inside of the class. Methods must be within a class
