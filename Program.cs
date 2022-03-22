@@ -251,6 +251,23 @@ namespace weatherorsomething
             return Zips;
             // Is there a way to loop these things? So that I can say how many times I want it and loop it x amount of times?
         }
+
+        public static void zipss(List<string> zipss)
+        {
+            if (zipss.Count == 0)
+            {
+                throw new Exception(" There has to be atleast 1 zipcode.");
+            }
+            
+            foreach (string zip in zipss)
+            {
+                Console.WriteLine($"{zip}");
+            }
+            
+            return null;
+        }
+
+        
     }
 
 
