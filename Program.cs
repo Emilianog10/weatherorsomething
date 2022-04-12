@@ -30,9 +30,15 @@ namespace weatherorsomething
                         Console.WriteLine($"{yes}");
                         Console.WriteLine("Press enter to continue.");
                         Console.ReadLine();
+                        
                     }
-
                 }
+                Console.WriteLine("Would you like to see all the zipcodes? (yes or no)");
+                    string input = Console.ReadLine();
+                    if (input == "yes")
+                    {
+                        zipss(resultss);
+                    }
                 return;
                     
                 
@@ -264,7 +270,7 @@ namespace weatherorsomething
                 Console.WriteLine($"{zip}");
             }
             
-            return null;
+            return;
         }
 
         
